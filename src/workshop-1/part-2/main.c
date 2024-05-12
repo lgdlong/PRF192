@@ -2,10 +2,7 @@
 #include <limits.h>
 
 int main() {
-    int a = 10;
-    double b = 15.5;
-    
-    double c = b - a;
-    printf("%lf", c);
+    char c = 'z';
+    printf("%d", c - 'a');
     return 0;
 }
