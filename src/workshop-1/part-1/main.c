@@ -1,26 +1,19 @@
 #include <stdio.h>
 
-int findMax(double a, double b, double c) {
-	double max = a;
-	if (b > max) {
-		return b;
-	}
-	else if (c > max) {
-		return c;
-	}
-	else {
-		return max;
-	}
-}
-
 int main() {
-	double a, b, c;
-	scanf("%lf", &a);
-	scanf("%lf", &b);
-	scanf("%lf", &c);
+	int n;
+	scanf("%d", &n);
 
-	double max = findMax(a, b, c);
-	
-	printf("MAX = %lf", max);
-	return 0;
+	switch (n) {
+	case 1:
+	case 2:
+		printf("YES");
+		break;
+	case 3: case 4:
+		printf("NO");
+		break;
+	default:
+		break;
+	}
+
 }
