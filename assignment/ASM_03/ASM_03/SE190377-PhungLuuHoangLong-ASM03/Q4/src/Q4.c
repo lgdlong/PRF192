@@ -2,12 +2,30 @@
 #include <stdlib.h>
 //--------------------------------------------------------
 //The function used to check whether n is prime or not
-int isPrime(int n);
+int isPrime(int n) {
+  if (n < 2) return 0;
+  for (int i = 2; i <= sqrt(n); i++) {
+    if (n % i == 0) return 0;
+  }
+  return 1;
+}
 //---------------------------------------------------------
 int findMaxPrimeN2M(int n,int m){
-   	//Begin your statements here		
-	//......
-	//......
+  //Begin your statements here		
+	int max = -1;
+  
+  if (n > m) {
+    int temp = n;
+    n = m;
+    m = temp;
+  }
+
+  for (int i = n; i <= m; i++) {
+    if (isPrime(i)) {
+      if (i >= max) max = i;
+    }
+  }
+  return max;
 	//End your statements here	
 }
 /*

@@ -1,11 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+
+
 void countConsonant(char c1,char c2,int *count){
 	//Begin your statements here	
 	//The result after processing will be stored in the *count variable
-	//......
-	//......
+
+  *count = 0;
+
+  c1 = tolower(c1);
+  c2 = tolower(c2);
+
+  if (c1 > c2) {
+    char temp = c1;
+    c1 = c2;
+    c2 = temp;
+  }
+
+  for (char i = c1; i <= c2; i++) {
+    if (i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'u') {
+      continue;
+    } else {
+      (*count)++;
+    }
+  }
 	//End your statements here	
 }
 /*

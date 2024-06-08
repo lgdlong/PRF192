@@ -4,7 +4,9 @@
 long sum(int n, int x){	
 	long sum = 0;
 	//Write your statements here
-    //.......
+  for (int i = 1; i <= n; i++) {
+    sum += i*x;
+  }
 	//End your statements 
      return sum;
 }
